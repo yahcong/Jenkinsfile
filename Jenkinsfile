@@ -4,12 +4,16 @@ pipeline {
     stage('Test') {
       steps {
         sh 'ls'
+        sh '''echo aaaa
+'''
       }
     }
   }
   post {
-      always{
-          junit 'build/reports/**/*.xml'
-      }
+    always {
+      junit 'build/reports/**/*.xml'
+      
+    }
+    
   }
 }
