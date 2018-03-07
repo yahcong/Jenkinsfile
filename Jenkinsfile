@@ -6,14 +6,16 @@ pipeline {
         sh 'ls'
         sh '''echo aaaa
 '''
-        sh '''touch test_port.xml
+        sh '''mkidr -p build/reports/test/port.xml
 '''
       }
     }
   }
   post {
     always {
-      junit '*.xml' 
+      junit '*.xml'
+      
     }
+    
   }
 }
