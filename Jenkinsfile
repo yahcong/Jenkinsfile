@@ -8,14 +8,13 @@ pipeline {
 '''
         sh 'mkdir -p build/reports/test/'
         sh '''touch build/reports/test/post.xml
-echo "<?xml version="1.0" encoding="UTF-8"?>
-<suite name="Simple HTML-XML Suite">
-  
-  <test name="Simple HTML-XML test">
-    <classes>
-      <class name="SampleTest" />
-    </classes>
-  </test>
+echo <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+    <test name="test12">
+        <classes>
+            <class name="TankLearn2.Learn.TestNGLearn1" />
+        </classes>
+    </test>
 </suite>" >post.xml
 '''
       }
