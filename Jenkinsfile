@@ -13,7 +13,7 @@ pipeline {
   }
   post {
     always {
-      junit '*.xml' 
+      junit 'build/reports/**/*.xml' 
     }
   }
 }
