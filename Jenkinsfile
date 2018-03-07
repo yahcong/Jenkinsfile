@@ -16,7 +16,7 @@ echo "<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testn
             <class name="TankLearn2.Learn.TestNGLearn1" />
         </classes>
     </test>
-</suite>" >post.xml
+</suite>" >build/reports/test/post.xml
 '''
       }
     }
