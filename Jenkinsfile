@@ -7,13 +7,16 @@ pipeline {
         sh '''echo aaaa
 '''
         sh '''mkdir -p build/reports/test/port.xml
+echo aaaa > build/reports/test/port.xml
 '''
       }
     }
   }
   post {
     always {
-      junit 'build/reports/**/*.xml' 
+      junit 'build/reports/**/*.xml'
+      
     }
+    
   }
 }
