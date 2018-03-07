@@ -6,7 +6,7 @@ pipeline {
         sh 'ls'
         sh '''echo aaaa
 '''
-        sh '''mkdir -p build/reports/test/port.xml
+        sh '''mkdir -p build/reports/test/
 echo aaaa > build/reports/test/port.xml
 '''
       }
