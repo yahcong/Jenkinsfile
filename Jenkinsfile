@@ -7,8 +7,7 @@ pipeline {
         sh '''echo aaaa
 '''
         sh '''mkdir -p build/reports/test/
-echo aaaa > build/reports/test/port.xml
-'''
+cp /home/ycong/jenkins/port.xml build/reports/test/'''
       }
     }
   }
