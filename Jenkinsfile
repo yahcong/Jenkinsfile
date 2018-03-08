@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('Test') {
+    stage('test') {
       steps {
         sh 'ls'
         sh '''echo aaaa
@@ -18,6 +18,11 @@ echo "<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE suite SYSTEM "http://testn
     </test>
 </suite>" >build/reports/test/post.xml
 '''
+      }
+    }
+    stage('test2') {
+      steps {
+        echo 'eeee'
       }
     }
   }
