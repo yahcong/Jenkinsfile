@@ -16,5 +16,10 @@ pipeline {
         echo 'eeee'
       }
     }
+    stage('sleep') {
+      steps {
+        sleep(time: 1, unit: 'SECONDS')
+      }
+    }
   }
 }
