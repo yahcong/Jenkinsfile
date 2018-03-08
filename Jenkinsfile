@@ -6,8 +6,7 @@ pipeline {
         sh 'ls'
         sh '''echo aaaa
 '''
-        sh 'mkdir -p build/reports/test/'
-        sh '''touch build/reports/test/post.xml
+        sh '''touch post.xml
 '''
       }
     }
