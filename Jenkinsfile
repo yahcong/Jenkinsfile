@@ -16,8 +16,17 @@ pipeline {
       }
     }
     stage('sleep') {
-      steps {
-        sleep(time: 1, unit: 'SECONDS')
+      parallel {
+        stage('sleep') {
+          steps {
+            sleep(time: 1, unit: 'SECONDS')
+          }
+        }
+        stage('Mail') {
+          steps {
+            mail(subject: 'test Jenkisn Mail', body: 'check Jenkisn Mail', from: 'Jenkisn@ebupt.com', to: 'congyahuan@ebupt.com')
+          }
+        }
       }
     }
     stage('post_result') {
