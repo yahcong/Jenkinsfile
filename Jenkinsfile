@@ -21,5 +21,10 @@ pipeline {
         sleep(time: 1, unit: 'SECONDS')
       }
     }
+    stage('post_result') {
+      steps {
+        junit(testResults: '*.xml', allowEmptyResults: true)
+      }
+    }
   }
 }
