@@ -13,6 +13,7 @@ pipeline {
     stage('test2') {
       steps {
         echo 'eeee'
+        junit(allowEmptyResults: true, testResults: '*.xml')
       }
     }
     stage('sleep') {
