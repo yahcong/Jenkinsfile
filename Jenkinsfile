@@ -10,10 +10,9 @@ pipeline {
 '''
       }
     }
-    stage('test2') {
+    stage('Print Message') {
       steps {
         echo 'eeee'
-        junit(allowEmptyResults: true, testResults: '*.xml')
       }
     }
     stage('sleep') {
